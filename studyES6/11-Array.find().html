@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+            Array.find()
+            用于找出第一个符合条件的数组成员，如果没有返回undefined
+         */
+        let arr=[
+            {
+                id:1,
+                name:'yas'
+            },
+            {
+                id:2,
+                name:'timo'
+            }
+            ]
+        let target=arr.find((item,index)=>item.id==2)
+        console.log(target)
+    </script>
+</body>
+</html>

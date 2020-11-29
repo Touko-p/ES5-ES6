@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button></button>
+    <script>
+        // 函数的调用方式
+
+        // 1.普通函数
+        function f1() {
+            console.log('人生的巅峰-普通函数')
+        }
+        f1();
+        f1.call();
+        // 2.对象的方法
+        var f2={
+            sayHi:function () {
+                console.log('人生的巅峰-对象的方法')
+            }
+        }
+        f2.sayHi();
+        // 3.构造函数
+        function f3(){
+            console.log('人生的巅峰-构造函数')
+        }
+        new f3();
+        // 4.绑定事件函数
+        var btn=document.querySelector('button');
+        btn.onclick=function () {
+            console.log('人生的巅峰-绑定事件函数')
+        }
+        // 5.定时器函数
+        setInterval(function () {
+            console.log('人生的巅峰-定时器函数')
+        },1000)
+        // 6.立即执行函数
+            (function () {
+                console.log('人生的巅峰-立即执行函数')
+            }())
+    </script>
+</body>
+</html>

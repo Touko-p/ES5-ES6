@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const sum=(...arg)=>{
+            let total=0;
+            arg.forEach(value => total+=value)
+            return total;
+        }
+        console.log(sum(10,20))
+        console.log(sum(10,20,30,50))
+
+        let arr=['张三','李四','王五'];
+        let [n1,...n2]=arr;
+        console.log(n1)
+        console.log(n2)
+    </script>
+</body>
+</html>

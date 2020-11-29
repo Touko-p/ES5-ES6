@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button><button>点击</button><button>点击</button>
+<script>
+    // bind() 绑定 捆绑的意思
+    var obj={
+        name:'yaso'
+    };
+    function f(a,b){
+        console.log(this)
+        console.log(a+b)
+    }
+    var k=f.bind(obj,1,2);
+    k()
+    // 不会调用原来的函数 可以改变原来函数内部this指向
+    // 返回的是原函数改变this之后产生的新韩淑
+    // 如果有的函数我们不需要立即调用，但又想改变这个函数内部的this指向此时用bind
+    // Q:我们有一个按钮，当我们点击了之后，就禁用这个按钮，3秒后开启这个按钮
+    // var btn=document.querySelector('button');
+    // btn.onclick=function (){
+    //     this.disabled=true;
+    //     setTimeout(function () {
+    //         this.disabled=false; //定时器函数里面的this指向的是window
+    //     }.bind(this),3000) //这个this指向的是btn这个对象
+    // }
+    var btns=document.querySelectorAll('button');
+    for (let i in btns){
+        btns[i].onclick=function () {
+            this.disabled=true
+            setTimeout(function () {
+                this.disabled=false
+            }.bind(this),2000)
+        }
+    }
+</script>
+</body>
+</html>

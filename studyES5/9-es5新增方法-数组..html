@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // forEach 迭代（遍历)数组
+        let arr = [1, 2, 3];
+        let sum = 0;
+        arr.forEach(function (value, index, array) {
+            console.log(value)
+            console.log(index)
+            console.log(array)
+            sum+=value;
+        })
+        console.log(sum)
+        // filter 迭代（遍历) 筛选数组 查找满足条件的元素 返回数组
+        let arr1 = [12, 66, 4, 88];
+        let newArr=arr1.filter(function (value,index,array) {
+            return value>=20;
+        })
+        console.log(newArr)
+        // some 查找数组中是否有满足条件的元素 返回bool 查找到一个就终止循环
+        let arr2=[10,20,30];
+        let flag=arr2.some(function (value, index, array) {
+            return value>=40;
+        })
+        console.log(flag)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const s1=new Set();
+        console.log(s1.size);
+        console.log('------------------')
+        const s2=new Set(['1','2']);
+        console.log(s2.size)
+        console.log('------------------')
+        const s3=new Set([1,2,13,12,2])
+        console.log(s3.size)
+        console.log('------------------')
+        const arr=[...s3];
+        console.log(s3)
+        console.log('------------------')
+        const s4=new Set();
+        s4.add(1).add(2).add(1).add(3);
+        console.log(s4)
+        console.log('------------------')
+        const flag=s4.delete(5)
+        console.log(flag)
+        console.log('------------------')
+        const flag1=s4.has(2);
+        console.log(flag1)
+        console.log('------------------')
+        s4.clear();
+        console.log(s4);
+        console.log('------------------')
+        let s5=new Set([1,2,3]);
+        s5.forEach(value => console.log(value))
+    </script>
+</body>
+</html>

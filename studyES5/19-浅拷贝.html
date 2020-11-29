@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //浅拷贝只是拷贝一层，更深层次对象级别的只拷贝引用 地址
+        //深拷贝拷贝多层，每一层数据都会拷贝
+        var obj={
+            id:1,
+            name:'andy',
+            msg:{
+                age:18
+            }
+        };
+        var obj1={};
+        var obj2={};
+        for (var k in obj){
+            //k是属性名 obj[k]是属性值
+            obj1[k]=obj[k];
+        }
+        console.log(obj1)
+        obj1.msg.age=20;
+        console.log(obj)
+        console.log('--------------')
+        Object.assign(obj2,obj);
+        console.log(obj2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="nav">
+    <li>榴莲</li>
+    <li>葡萄</li>
+    <li>苹果</li>
+    <li>香蕉</li>
+</ul>
+<script>
+    //闭包应用-3秒后打印所有li元素的内容
+    var lis=document.querySelectorAll('.nav li');
+    for (var i=0;i<lis.length;i++){
+        (function (i) {
+            setTimeout(function () {
+                console.log(lis[i].innerHTML)
+            },3000)
+        })(i)
+    }
+</script>
+</body>
+</html>

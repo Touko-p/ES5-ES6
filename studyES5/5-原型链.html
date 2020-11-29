@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Star(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        Star.prototype={
+            constructor:Star,
+            sing:function () {
+                console.log('singing')
+            }
+        }
+        var ldh=new Star('刘德华',13);
+        // 1 只要是对象就有原型
+        console.log(Star.prototype)
+        console.log(Star.prototype.__proto__===Object.prototype)
+        // 2 Star原型对象里面的__proto__原型指向的是 Object.prototype
+        console.log(Object.prototype.__proto__)
+        // 3 我们Object.prototype原型对象里面的__proto__原型 指向null
+    </script>
+</head>
+<body>
+
+</body>
+</html>

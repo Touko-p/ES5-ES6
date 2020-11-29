@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul class="nav">
+        <li>榴莲</li>
+        <li>葡萄</li>
+        <li>苹果</li>
+        <li>香蕉</li>
+    </ul>
+<script>
+    //  1.我们可以利用动态添加属性的方式
+    var lis=document.querySelectorAll('.nav li');
+    for (var i in lis){
+        lis[i].index=i;
+        lis[i].onclick=function () {
+            console.log(this.index)
+        }
+    }
+    for (let i in lis){
+        lis[i].onclick=function () {
+            console.log(i)
+        }
+    }
+    // 2.利用闭包的方式得到当前小li的索引号
+    for (var i=0;i<lis.length;i++){
+        //立即执行函数也称为小闭包 因为立即执行函数里面的任何一个函数都可以使用它的i这变量
+        (function (i) {
+            lis[i].onclick=function () {
+                console.log(i)
+            }
+        })(i);
+    }
+</script>
+</body>
+</html>

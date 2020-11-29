@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var obj={
+            name:'yaSo'
+        }
+        function f(a,b) {
+            console.log(this)
+            console.log(a+b)
+        }
+        f.call(obj,1,2)
+        // call 第一个可以调用函数 第二个可以改变函数内的this指向
+        // call 主要作用实现继承
+        function Father(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        function Son(name,age) {
+            Father.call(this,name,age)
+        }
+        var son=new Son('亚索',13);
+        console.log(son)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

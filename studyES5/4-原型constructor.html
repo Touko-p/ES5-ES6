@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Star(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        Star.prototype={
+            constructor:Star,
+            sing:function (){
+                console.log('singing')
+            },
+            movie:function () {
+                console.log('moving')
+            }
+        }
+        var ldh=new Star('刘德华',17);
+        console.log(Star.prototype);
+        console.log(ldh.__proto__);
+        console.log(Star.prototype.constructor);
+        console.log(ldh.__proto__.constructor);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

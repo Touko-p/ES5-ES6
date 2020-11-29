@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+            1.let关键字用来声明变量
+            2.使用let关键字声明的变量具有块级作用域
+            3.在一个大括号中使用let关键字声明的变量才具有块级作用域 var关键字是不具备这个特点的
+            4.let 防止循环变量变成全局变量
+            5.使用let关键词声明的变量没有变量提升
+            6.使用let关键字声明的变量具有暂时性死区特性
+
+         */
+        // if (true){
+        //     let a=1;
+        //     console.log(a);
+        //     if (true){
+        //         let b=2;
+        //     }
+        //     console.log(b);
+        // }
+        // console.log(a);
+        //  在一个大括号中使用let关键字声明的变量才具有块级作用域 var关键字是不具备这个特点的
+        //     if (true){
+        //         let c=3;
+        //         var d=4;
+        //     }
+        //     console.log(d);
+        //     console.log(c);
+        //  防止循环变量变成全局变量
+        // for (let i=0;i<2;i++){
+        //
+        // }
+        // console.log(i)
+        //  使用let关键词声明的变量没有变量提升
+        // console.log(e)
+        // let e=5;
+        //  使用let关键字声明的变量具有暂时性死区特性
+        var f=6;
+        if (true){
+            console.log(f)
+            let f=6;
+        }
+    </script>
+</body>
+</html>

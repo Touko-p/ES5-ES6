@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1.创建类 class 创建一个 明星类
+        class Star {
+            constructor(name,age) {
+                this.name=name;
+                this.age=age;
+            }
+            sing(song){
+                console.log(this.name+song)
+            }
+        }
+        // 2.利用类创建对象 new
+        var btys=new Star('坂田银时',19)
+        console.log(btys)
+        btys.sing('化作尘土');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

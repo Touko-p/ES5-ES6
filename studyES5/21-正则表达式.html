@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //1.利用 RegExp对象来创建 正则表达式
+        var regexp=new RegExp(/123/);
+        console.log(regexp)
+        //2.利用字面量创建 正则表达式
+        var regexp1=/123/;
+        //3.test方法用来检测字符串是否符合正则表达式要求的规范
+        console.log(regexp1.test(123))
+    </script>
+
+</body>
+</html>

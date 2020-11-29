@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+            1.对象解构允许我们使用变量的名字匹配对象的属性 匹配成功将对象属性的值赋值给变量
+         */
+        let person={name:'张三',age:18};
+        let {name,age}=person;
+        console.log(name)
+        console.log(age)
+        let {name:myName,age:myAge}=person;
+        console.log(myName);
+        console.log(myAge);
+    </script>
+</body>
+</html>

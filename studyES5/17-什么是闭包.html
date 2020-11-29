@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 闭包(closure) 指有权访问另一个函数作用域中变量的函数
+        // 闭包：f1函数作用域访问了另外一个函数f里面的局部变量num
+        // f 外面的作用域可以访问 f 内部的局部变量
+        // 闭包的主要作用:延伸了变量的作用范围
+
+        //1.闭包是什么
+        //闭包是一个函数（一个作用域可以访问林外一个函数的局部变量）
+        //2.闭包的主要作用
+        //延伸变量的作用范围
+        function f() {
+            let num=10;
+            // function f1() {
+            //     console.log(num)
+            // }
+            // return f1;
+            return function (){
+                console.log(num)
+            }
+        }
+        var k=f();
+        k();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

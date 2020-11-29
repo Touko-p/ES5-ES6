@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 边界符 ^:匹配行首文本 $：匹配行尾文本
+        var rg=/abc/;   //正则表达式里面不需要加引号 不管是数字型还是字符串型
+        // /abc/ 只要包含abc这个字符串返回的都是true
+        console.log(rg.test('abc'))
+        console.log(rg.test('aabc'))
+        console.log(rg.test('abcc'))
+        console.log('---------------------')
+        var rg1=/^abc/; // 要求以abc开头
+        console.log(rg1.test('abc'))
+        console.log(rg1.test('aabc'))
+        console.log(rg1.test('abcc'))
+        console.log('---------------------')
+        var rg2=/^abc$/;    //精确匹配 要求必须是 abc 字符才符合规范
+        console.log(rg2.test('abc'))
+        console.log(rg2.test('aabc'))
+        console.log(rg2.test('abcabc'))
+    </script>
+</body>
+</html>

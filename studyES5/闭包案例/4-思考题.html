@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // var name='the window';
+        // var obj={
+        //     name:'my object',
+        //     getName:function () {
+        //         return function () {
+        //             return this.name;
+        //         }
+        //     }
+        // }
+        // console.log(obj.getName()()) //the window 无闭包产生：没有访问到局部变量
+
+        var name='the window';
+        var obj={
+            name:'my object',
+            getName:function () {
+                var that=this;
+                return function () {
+                    return that.name;
+                }
+            }
+        }
+        console.log(obj.getName()())
+        // var f=obj.getName();
+        // var f=function () {
+        //     return that.name;
+        // }
+        // f();
+    </script>
+</body>
+</html>
